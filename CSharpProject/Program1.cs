@@ -2,12 +2,11 @@ using System.Collections;
 using CSharpProject;
 
 //non-generic type 
-// ArrayList list=new ArrayList();
+ArrayList list=new ArrayList();
 // list.Add(10); //boxing 
 // list.Add(20.4);
 // list.Add(90);
 // list.Add(new Employee(3));
-
 
 // string x= (string)list[2]; //unboxing
 // System.Console.WriteLine(x.ToUpper());
@@ -28,7 +27,7 @@ System.Console.WriteLine(colors.Count());
 
 System.Console.WriteLine(colors[0].ToUpper());
 
-// List<string> techStack1 = new List<string> { "C#", "NET Core", "SQL Server" };
+List<string> techStack1 = new List<string> { "C#", "NET Core", "SQL Server" };
 
 List<string> techStack2 = ["C#", "NET Core", "SQL Server", "Java", "Python"];
 
@@ -58,13 +57,22 @@ var output = (from s in techStack4
 System.Console.WriteLine(output[0]);
 output.ForEach(x => System.Console.WriteLine(x));
 
-var output1 = techStack4.Where(x => x.ToLower().Contains("net")).ToList();
+var output1 = techStack4.AsParallel().Where(x => x.ToLower().Contains("net")).ToList();
 
 System.Console.WriteLine(output1[0]);
-output1.ForEach(x => System.Console.WriteLine(x));
+output1.ForEach((string x) => System.Console.WriteLine(x));
+
 
 
 List<int> numbers1 = [343, 3443, 343434, 3443];
+
+ void demo(int x)
+{
+    System.Console.WriteLine(x);
+}
+
+numbers.ForEach(a=>System.Console.WriteLine(a));
+
 
 var output3 = numbers.Where(x => x > 400).ToList();
 
@@ -75,7 +83,7 @@ bool check(int x)
 {
     return x > 400;
 }
-var output4 = numbers.Where(check).ToList();
+var output4 = numbers.Where(check).Distinct().ToList();
 
 var sum = numbers1.Sum();
 System.Console.WriteLine(sum);
@@ -117,4 +125,4 @@ x=>x.StandardID,
 
 System.Console.WriteLine(outputz);
 
-//All, Any
+

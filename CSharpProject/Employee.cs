@@ -3,6 +3,8 @@ namespace CSharpProject;
 
 public class Employee
 {
+    //should not be null 
+    public string? check;
     public string performance;
     private int _id;
     private string _name;
@@ -12,6 +14,7 @@ public class Employee
     public Employee(int _id)
     {
        
+    //    check=null;
         this._id = _id;
     }
 
@@ -25,7 +28,7 @@ public class Employee
 
     public int Id
     {
-        get => _id;
+        get;
         //write
         set
         {

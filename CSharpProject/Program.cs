@@ -112,23 +112,37 @@ p.name="saul";
 p.CalculateSalary();
 
 
-IDriver driver=new ChromeBrowser();
-driver=new EdgeBrowser();
+// IDriver driver=new ChromeBrowser();
+// driver=new EdgeBrowser();
 
-driver.NavigateToURL();
+// driver.NavigateToURL();
 
 
-ChromeBrowser ch=new ChromeBrowser();
-ch.NavigateToURL();
-ch.GetTitle();
-ch.ExecuteScript();
+// ChromeBrowser ch=new ChromeBrowser();
+// ch.NavigateToURL();
+// ch.GetTitle();
+// ch.ExecuteScript();
 
 
 List<Employee> employees=new List<Employee>();
 employees.Add(emp1);
 employees.Add(emp2);
 
+//create method return type bool and argument should be Employee
+bool RunLogic(Employee employee)
+{
+    return employee.id>=150;
+}
 
-System.Console.WriteLine(emp1.id);
+var seniorEmployees=employees.Where(x=>x.id<=150);
+var seniorEmployees1=employees.Where(RunLogic);
 
-System.Console.WriteLine(employees[0].id);
+
+// System.Console.WriteLine(emp1.id);
+
+// System.Console.WriteLine(employees[0].id);
+
+
+System.Console.WriteLine(emp1);
+System.Console.WriteLine(emp1.GetHashCode());
+System.Console.WriteLine(emp2.GetHashCode());
