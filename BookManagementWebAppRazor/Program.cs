@@ -5,13 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddSingleton<Demo1>();
+builder.Services.AddSingleton<StoreValue>();
 
 builder.Services.AddValidation();
 
 builder.Services.AddSession();
-
-
 
 var app = builder.Build();
 

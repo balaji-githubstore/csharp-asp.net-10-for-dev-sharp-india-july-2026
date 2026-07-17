@@ -15,7 +15,6 @@ namespace BookManagementWebAppRazor.Pages.Books
         {
             demo1.id += 1;
             _demo11 = demo1;
-
         }
 
         public void OnGet()
@@ -24,16 +23,19 @@ namespace BookManagementWebAppRazor.Pages.Books
             Books = BookRepository.GetAll();
 
             ViewData["Title"] = "BookIndexPage";
+            HttpContext.Session.SetObject("book",Books);
 
             var loaded = HttpContext.Session.GetString("Loaded");
-
             if (loaded == null)
             {
+
                 HttpContext.Session.SetString("Loaded", "Yes");
+                
                 ViewData["Message"] = "First Visit";
             }
             else
             {
+                var books=HttpContext.Session.GetObject<List<Book>>("book");     
                 ViewData["Message"] = "Page Reloaded";
             }
         }

@@ -12,6 +12,6 @@ public class Book
     public decimal Price { get; set; }
     public bool IsAvailable { get; set; }
 
-    public int Year { get; set; }
+    // public int Year { get; set; }
 }
 
