@@ -1,9 +1,10 @@
 using BooksManagement.Dtos;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 var groupBook = app.MapGroup("/books");
- 
+
 //middleware 1 -- auth
 app.Use(async (context, next) =>
 {
@@ -20,10 +21,10 @@ app.Use(async (context, next) =>
 });
 
 app.UseWhen(
-   context => context.Request.Method=="DELETE",
+   context => context.Request.Method == "DELETE",
    appBuilder =>
    {
-       appBuilder.Use(async (HttpContext context,RequestDelegate next) =>
+       appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
        {
            string apiKey = "kite-delete-456";
            if (!context.Request.Headers.TryGetValue("x-api-key", out var value) || value != apiKey)
@@ -45,11 +46,11 @@ List<Book> books = [
 
 groupBook.MapGet("/", () => books);
 
-groupBook.MapGet("/{id}", (int id) =>
+groupBook.MapGet("/", (int id) =>
     books.FirstOrDefault(x => x.Id == id)
 ).WithName("GetBookById");
 
-//groupBook.MapGet("/", (string? name)=>{}
+// groupBook.MapGet("/", ([FromHeader]string name,[FromBody]string text)=>{}
 
 groupBook.MapPost("/", (CreateBook newBook) =>
 {
@@ -70,7 +71,7 @@ groupBook.MapPost("/", (CreateBook newBook) =>
 });
 
 //put 
-groupBook.MapPut("/{id}", (UpdateBook updateBook, int id) =>
+groupBook.MapPut("/{id?}", (UpdateBook updateBook, int id) =>
 {
     // books.FindIndex()
     //find index and try update the record of books 
@@ -83,7 +84,6 @@ groupBook.MapPut("/{id}", (UpdateBook updateBook, int id) =>
     books[index] = new Book(Id: id, Title: updateBook.Title, Author: updateBook.Author, Year: updateBook.Year);
     return Results.NoContent();
 });
-
 
 //put 
 groupBook.MapPatch("/{id}", (UpdateBook updateBook, int id) =>
@@ -114,8 +114,13 @@ groupBook.MapDelete("/{id}", (int id) =>
     }
     else
     {
-
         return Results.NoContent();
     }
+});
+
+app.MapGet("/demo", ([AsParameters] BookDetail detail) =>
+{
+    // detail.book.Id
+    Results.Ok(detail.Id);
 });
 app.Run();

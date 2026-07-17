@@ -1,0 +1,51 @@
+﻿@page
+@model BookManagementWebAppRazor.Pages.Books.Index1Model
+@{
+}
+
+<h1>@Model.Books.Count</h1>
+
+@if (TempData["Message"] != null)
+{
+    <h1>@TempData["Message"]</h1>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Price</th>
+            <th scope="col">IsAvailable</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Price</td>
+                <td>@book.IsAvailable</td>
+                <td><a asp-page="Edit1" asp-route-id="@book.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="post">
+    <input name="Title">
+    <input name="Author">
+    <button>
+        Save
+    </button>
+</form>
+
+<form method="post" asp-page-handler="AddNewBook">
+    <input name="Title">
+    <input name="Author">
+    <button>
+        Save
+    </button>
+</form>

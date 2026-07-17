@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model BookManagementWebAppRazor.Pages.Books.Edit1Model
+@{
+    ViewData["Title"] = "EditBookPage";
+}
+
+<h1>@Model.BookDetail.Title</h1>
+
+<form method="post" asp-page="Edit1" asp-page-handler="UpdateBook">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="BookDetail.Id" />
+    <label asp-for="BookDetail.Title"></label>
+    <input asp-for="BookDetail.Title" readonly><br><br>
+    <label asp-for="BookDetail.Author"></label>
+    <input asp-for="BookDetail.Author"><br><br>
+    <label asp-for="BookDetail.Price"></label>
+    <input asp-for="BookDetail.Price"><br><br>
+    <span asp-validation-for="BookDetail.Price"></span><br><br>
+
+    <label asp-for="BookDetail.IsAvailable"></label>
+    <input asp-for="BookDetail.IsAvailable"><br><br>
+    <input type="submit" value="Submit">
+</form>
+

@@ -1,7 +1,7 @@
     using System;
-    using BookManagementWebApplication.Models;
+using BookManagementWebAppRazor.Models;
 
-    namespace BookManagementWebApplication.Model;
+namespace BookManagementWebAppRazor.Model;
 
     public static class BookRepository
     {
