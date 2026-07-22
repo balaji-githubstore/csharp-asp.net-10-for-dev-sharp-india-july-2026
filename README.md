@@ -33,12 +33,6 @@ DI container registration, service lifetimes (singleton, scoped, transient), dep
 ### 9. **9BooksManagement.Test** - Unit Testing
 MSTest framework, Moq for mocking, test organization, unit test patterns, service layer testing, API endpoint testing.
 
-### 10. **BusinessService** - Shared Services Library
-Reusable business logic, service layer abstractions, cross-project service implementations.
-
-### 11. **DemoProject** - Full-Stack Application
-Integrated example combining: APIs, Razor Pages, logging, authentication, caching, DI, database access, and hosting considerations.
-
 ---
 
 ## Key Learning Areas
@@ -149,24 +143,6 @@ Integrated example combining: APIs, Razor Pages, logging, authentication, cachin
 | **Console Provider** | Console output logging | Project 6 |
 | **Serilog Integration** | Advanced logging, file sinks, rolling intervals | Project 6 |
 | **EventLog** | Windows Event Log integration | Project 6 |
-
-### State Management & Data Passing
-| Concept | Project | Purpose |
-|---------|---------|---------|
-| **ViewData** | Project 5 (MVC) | Dictionary-based data passing from Controller to View |
-| **ViewBag** | Project 5 (MVC) | Dynamic object for Controller-to-View data transfer |
-| **TempData** | Project 5 & 6 | Temporary data persistence across redirects |
-| **Session** | Project 6 (Razor Pages) | Server-side session storage for user data |
-
-### Client-Side Storage
-| Concept | Project | Purpose |
-|---------|---------|---------|
-| **Cookies** | Project 5 & 6 | Store client-side data with HTTP requests |
-
-### Security & Authentication
-| Concept | Project | Purpose |
-|---------|---------|---------|
-| **JWT Security** | Project 2 & 3 (APIs) | Token-based authentication for APIs |
 
 ### Caching Strategies
 | Concept | Project | Purpose |
