@@ -1,3 +1,5 @@
-{
-    "dotnet.defaultSolution": "CSharpProject.slnx"
-}
+// {
+//     "dotnet.defaultSolution": "CSharpProject.slnx",
+//     "appService.defaultWebAppToDeploy": "/subscriptions/ad95d6b6-1df3-41df-9811-45be76c9c3dd/razor-demo-group/providers/Microsoft.Web/sites/webrazorapp123",
+//     "appService.deploySubpath": "13WebAppRazor/bin/Release/net10.0/publish"
+// }

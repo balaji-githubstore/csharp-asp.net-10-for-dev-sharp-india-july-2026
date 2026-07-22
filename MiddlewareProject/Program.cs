@@ -1,4 +1,5 @@
 using System.Reflection.Metadata.Ecma335;
+using BusinessService.Services;
 using MiddlewareProject.MiddleComponent;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -110,3 +111,7 @@ app.Use(async (context, next) =>
 // });
 
 app.Run();
+
+
+
+BookService.GetBooks();

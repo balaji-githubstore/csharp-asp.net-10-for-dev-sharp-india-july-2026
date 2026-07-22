@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/BookManagementWebAppRazor/BookManagementWebAppRazor.csproj",
+                "/property:GenerateFullPaths=true",
+                "/tlog:stdoutput"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean",
+                "${workspaceFolder}/BookManagementWebAppRazor/BookManagementWebAppRazor.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/BookManagementWebAppRazor/BookManagementWebAppRazor.csproj",
+                "-c",
+                "Release",
+                "-o",
+                "${workspaceFolder}/BookManagementWebAppRazor/bin/Release/net10.0/publish"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

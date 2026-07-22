@@ -1,5 +1,6 @@
 GET http://localhost:5298/books
-x-api-key: kite-delete-456
+# x-api-key: kite-delete-456
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYmFsYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluQGJvb2suY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3ODQ1Mjk5MzMsImlzcyI6IkJvb2tBUEkiLCJhdWQiOiJCb29rVXNlcnMifQ.WJcRp93cAyazfIthCl2DBzolUxFIUX3DGPZoADyQas0
 ###
 GET http://localhost:5298/books/2
 ###
@@ -44,3 +45,8 @@ Content-Type: application/json
 ###
 DELETE  http://localhost:5298/books/2
 x-api-key: kite-delete-456
+
+
+
+###
+POST http://localhost:5298/auth/token

@@ -11,12 +11,11 @@ namespace BookManagementWebAppRazor.Pages.Books
         public Book BookDetail { get; set; }
 
 
-        private Demo1 _demo11;
-        public Edit1Model(Demo1 demo1)
+        public Edit1Model()
         {
             // _context = context;
-            demo1.id += 1;
-            _demo11 = demo1;
+            // demo1.id += 1;
+            // _demo11 = demo1;
 
         }
 
@@ -28,7 +27,7 @@ namespace BookManagementWebAppRazor.Pages.Books
         //update
         public IActionResult OnPostUpdateBook()
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return Page();
             BookRepository.Update(BookDetail.Id, BookDetail);
             return RedirectToPage("Index1");

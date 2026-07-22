@@ -1,19 +1,29 @@
 using BookManagementWebAppRazor.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/");
+    options.Conventions.AllowAnonymousToPage("/Login");
+});
 
-builder.Services.AddSingleton<StoreValue>();
 
-builder.Services.AddValidation();
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login";
+        options.AccessDeniedPath = "/AccessDenied";
+    });
 
-builder.Services.AddSession();
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-app.UseSession();
+// app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -27,7 +37,9 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseAuthorization();
+
+app.UseAuthentication();      // Reads the cookie
+app.UseAuthorization();       // Checks [Authorize]
 
 app.MapStaticAssets();
 

@@ -1,10 +1,14 @@
 <Solution>
   <Project Path="BookManagementWebApplication/BookManagementWebApplication.csproj" />
   <Project Path="BookManagementWebAppRazor/BookManagementWebAppRazor.csproj" />
+  <Project Path="BooksManagement.Test/BooksManagement.Test.csproj" />
   <Project Path="BooksManagement/BooksManagement.csproj" />
+  <Project Path="BusinessService/BusinessService.csproj" />
   <Project Path="CSharpProject/CSharpProject.csproj" />
+  <Project Path="DemoProject/DemoProject.csproj" />
   <Project Path="DIConcepts/DIConcepts.csproj" />
   <Project Path="EmployeeDashboard/EmployeeDashboard.csproj" />
   <Project Path="EntityFrameworkWithoutMigration/EntityFrameworkWithoutMigration.csproj" />
   <Project Path="MiddlewareProject/MiddlewareProject.csproj" />
+  <Project Path="TestProject1/TestProject1.csproj" />
 </Solution>
