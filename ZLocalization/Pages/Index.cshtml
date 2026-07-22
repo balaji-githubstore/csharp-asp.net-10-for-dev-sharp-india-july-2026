@@ -1,0 +1,14 @@
+﻿@page
+@model ZLocalization.Pages.IndexModel
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+
+<h2>@CultureInfo.CurrentCulture.Name</h2>
+<h2>@CultureInfo.CurrentUICulture.Name</h2>
+
+<h1>@Model.Welcome</h1>
+<p class="promo-text">
+    @Localizer["Welcome"]
+</p>

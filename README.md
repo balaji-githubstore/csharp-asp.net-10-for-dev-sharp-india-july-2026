@@ -174,6 +174,8 @@ MSTest framework, Moq for mocking, test organization, unit test patterns, servic
 | **Unit Tests** | Business logic testing, isolation | Project 9 |
 | **API Testing** | Endpoint testing, response validation | Project 9 |
 ---
+## Notes
+For IIS debugging and resx generator, will share the code details during weekend. 
 
 ## Getting Started
 

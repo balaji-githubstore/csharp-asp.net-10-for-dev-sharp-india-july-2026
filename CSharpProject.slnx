@@ -10,4 +10,5 @@
   <Project Path="9BooksManagement.Test/BooksManagement.Test.csproj" />
   <Project Path="BusinessService/BusinessService.csproj" />
   <Project Path="DemoProject/DemoProject.csproj" />
+  <Project Path="ZLocalization/ZLocalization.csproj" />
 </Solution>
