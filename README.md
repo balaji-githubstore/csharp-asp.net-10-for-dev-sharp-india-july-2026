@@ -150,29 +150,6 @@ Integrated example combining: APIs, Razor Pages, logging, authentication, cachin
 | **Serilog Integration** | Advanced logging, file sinks, rolling intervals | Project 6 |
 | **EventLog** | Windows Event Log integration | Project 6 |
 
-### Testing
-| Topic | Details | Project |
-|-------|---------|---------|
-| **MSTest Framework** | Test organization, Assert methods | Project 9 |
-| **Moq Library** | Mock objects, behavior verification | Project 9 |
-| **Unit Tests** | Business logic testing, isolation | Project 9 |
-| **API Testing** | Endpoint testing, response validation | Project 9 |
-
-### Hosting & Deployment
-| Topic | Details | Project |
-|-------|---------|---------|
-| **Kestrel Server** | Default ASP.NET Core server | Project 11 |
-| **IIS Hosting** | Application Pool, reverse proxy setup | Project 11 |
-| **ASP.NET Core Hosting Bundle** | Windows server deployment | Project 11 |
-| **Folder Permissions** | IIS_IUSRS security configuration | Project 11 |
-| **Custom Domain Binding** | hosts file, DNS configuration | Project 11 |
-| **Multi-App Hosting** | Port management, multiple applications | Project 11 |
-| **Application Publishing** | `dotnet publish -c Release` | Project 11 |
-
----
-
-## Advanced ASP.NET Core Concepts
-
 ### State Management & Data Passing
 | Concept | Project | Purpose |
 |---------|---------|---------|
@@ -202,6 +179,24 @@ Integrated example combining: APIs, Razor Pages, logging, authentication, cachin
 |---------|---------|---------|
 | **HttpClient** | Project 2 & 3 (APIs) | Make HTTP requests to external APIs |
 
+### Hosting & Deployment
+| Topic | Details | Project |
+|-------|---------|---------|
+| **Kestrel Server** | Default ASP.NET Core server | Project 11 |
+| **IIS Hosting** | Application Pool, reverse proxy setup | Project 11 |
+| **ASP.NET Core Hosting Bundle** | Windows server deployment | Project 11 |
+| **Folder Permissions** | IIS_IUSRS security configuration | Project 11 |
+| **Custom Domain Binding** | hosts file, DNS configuration | Project 11 |
+| **Multi-App Hosting** | Port management, multiple applications | Project 11 |
+| **Application Publishing** | `dotnet publish -c Release` | Project 11 |
+
+### Testing
+| Topic | Details | Project |
+|-------|---------|---------|
+| **MSTest Framework** | Test organization, Assert methods | Project 9 |
+| **Moq Library** | Mock objects, behavior verification | Project 9 |
+| **Unit Tests** | Business logic testing, isolation | Project 9 |
+| **API Testing** | Endpoint testing, response validation | Project 9 |
 ---
 
 ## Getting Started
