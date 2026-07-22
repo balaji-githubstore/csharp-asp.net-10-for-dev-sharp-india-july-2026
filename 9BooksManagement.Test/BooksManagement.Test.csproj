@@ -17,7 +17,7 @@
 
   <ItemGroup>
    
-    <ProjectReference Include="..\BookManagementWebApplication\BookManagementWebApplication.csproj" />
+    <ProjectReference Include="..\5BookManagementWebApplicationMVC\BookManagementWebApplication.csproj" />
    
     <ProjectReference Include="..\DemoProject\DemoProject.csproj" />
   </ItemGroup>
